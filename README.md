@@ -304,7 +304,7 @@ Podobnie jak `<header>`, znacznik `<footer>` może pojawić się **wielokrotnie*
     <a href="https://twitter.com/mojastrona">Twitter</a>
   </p>
 </footer>
-
+```
 
 ### Ćwiczenie 4
 1. Utwórz nowy plik opis.html
