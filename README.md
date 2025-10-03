@@ -72,8 +72,10 @@ Do tego celu używamy atrybutów:
         <td>18</td>
     </tr>
 </table>
+```
 
 ## Przykład użycia `rowspan`
+```html
 <table border="1" cellpadding="10" cellspacing="0">
     <tr>
         <th rowspan="2">Klasa</th>
