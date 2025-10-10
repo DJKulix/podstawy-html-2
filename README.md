@@ -314,3 +314,299 @@ Podobnie jak `<header>`, znacznik `<footer>` może pojawić się **wielokrotnie*
 3. Dodaj znaczniki meta dla kodowania oraz opisu.
 4. Znajdź opis dowolnej strony w wyszukiwarce Google. Dodaj nagłówek pierwszego poziomu z nazwą strony, drugiego poziomu z jej adresem jako link oraz akapit z opisem strony.
 
+# Formularze i elementy interaktywne w HTML
+
+## Co to jest formularz?
+Formularz HTML służy do **wprowadzania danych przez użytkownika** i ich przesyłania na serwer.
+
+```html
+<form action="adres_docelowy" method="get">
+  <!-- pola formularza -->
+</form>
+```
+
+| Atrybut | Opis |
+|----------|------|
+| `action` | adres, na który wysyłane są dane |
+| `method` | sposób przesyłania danych: `get` lub `post` |
+
+---
+
+## Element `<input>`
+Znacznik `input` służy do wprowadzania różnych typów danych.
+
+```html
+<input type="text" name="imie" placeholder="Wpisz swoje imię">
+```
+
+###  Typy pól `input`:
+| Typ | Opis | Przykład |
+|------|------|----------|
+| `text` | tekst | `<input type="text">` |
+| `password` | hasło | `<input type="password">` |
+| `number` | liczba | `<input type="number" min="0" max="10">` |
+| `email` | adres e-mail | `<input type="email">` |
+| `radio` | wybór jednej opcji | `<input type="radio" name="płeć" value="mężczyzna">` |
+| `checkbox` | wybór wielu opcji | `<input type="checkbox" name="zgoda">` |
+| `color` | wybór koloru | `<input type="color">` |
+| `date` | wybór daty | `<input type="date">` |
+| `file` | przesyłanie pliku | `<input type="file">` |
+
+---
+
+## 🔘 Przyciski
+Przycisk służy do wysyłania lub wykonywania akcji.
+
+```html
+<button type="submit">Wyślij</button>
+<button type="reset">Wyczyść</button>
+<button type="button" onclick="alert('Witaj!')">Kliknij mnie</button>
+```
+
+| Typ | Działanie |
+|------|------------|
+| `submit` | wysyła formularz |
+| `reset` | czyści pola formularza |
+| `button` | zwykły przycisk (np. do skryptów JS) |
+
+---
+
+## 📋 Przykład prostego formularza
+
+```html
+<form action="#" method="post">
+  <label>Imię:</label>
+  <input type="text" name="imie"><br><br>
+
+  <label>Email:</label>
+  <input type="email" name="email"><br><br>
+
+  <label>Płeć:</label>
+  <input type="radio" name="plec" value="Kobieta">Kobieta
+  <input type="radio" name="plec" value="Mężczyzna">Mężczyzna<br><br>
+
+  <label>Zainteresowania:</label><br>
+  <input type="checkbox" name="hobby" value="Podróże">Podróże
+  <input type="checkbox" name="hobby" value="Muzyka">Muzyka
+  <input type="checkbox" name="hobby" value="Sport">Sport<br><br>
+
+  <button type="submit">Wyślij</button>
+  <button type="reset">Wyczyść</button>
+</form>
+```
+
+---
+
+## Multimedia w HTML
+HTML pozwala łatwo osadzać **filmy, dźwięki i treści z YouTube**.
+
+### Film wideo
+
+```html
+<video width="400" controls>
+  <source src="film.mp4" type="video/mp4">
+  Twoja przeglądarka nie obsługuje wideo.
+</video>
+```
+
+Atrybuty:
+- `controls` – pokazuje przyciski odtwarzania/pauzy
+- `autoplay` – automatyczne odtwarzanie
+- `loop` – zapętlenie
+- `muted` – bez dźwięku
+
+---
+
+### Plik dźwiękowy
+
+```html
+<audio controls>
+  <source src="muzyka.mp3" type="audio/mpeg">
+  Twoja przeglądarka nie obsługuje audio.
+</audio>
+```
+
+---
+
+### Film z YouTube (iframe)
+
+```html
+<iframe width="560" height="315"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+```
+
+---
+
+## Dodatkowe elementy formularza
+
+| Element | Opis | Przykład |
+|----------|------|----------|
+| `<label>` | etykieta dla pola | `<label for="email">Email:</label>` |
+| `<select>` | lista rozwijana | `<select><option>Opcja 1</option></select>` |
+| `<textarea>` | większe pole tekstowe | `<textarea rows="4" cols="30"></textarea>` |
+| `<fieldset>` i `<legend>` | grupowanie pól | `<fieldset><legend>Dane</legend></fieldset>` |
+
+---
+
+## Ćwiczenia
+
+1. Utwórz formularz rejestracyjny z polami:
+   - imię, e-mail, hasło, płeć (radio), zainteresowania (checkbox), komentarz (textarea)
+2. Dodaj przycisk wysyłania i resetowania.
+3. Wstaw film z YouTube o podróżach.
+
+# Formularze i elementy interaktywne w HTML
+
+## Co to jest formularz?
+Formularz HTML służy do **wprowadzania danych przez użytkownika** i ich przesyłania na serwer.
+
+```html
+<form>
+  <!-- Pola formularza -->
+</form>
+```
+
+## Element `<input>`
+Znacznik `input` służy do wprowadzania różnych typów danych.
+
+```html
+<input type="text" name="imie" placeholder="Wpisz swoje imię">
+```
+
+### Typy pól `input`:
+| Typ | Opis | Przykład |
+|------|------|----------|
+| `text` | tekst | `<input type="text">` |
+| `password` | hasło | `<input type="password">` |
+| `number` | liczba | `<input type="number" min="0" max="10">` |
+| `email` | adres e-mail | `<input type="email">` |
+| `radio` | wybór jednej opcji | `<input type="radio" name="płeć" value="mężczyzna">` |
+| `checkbox` | wybór wielu opcji | `<input type="checkbox" name="zgoda">` |
+| `color` | wybór koloru | `<input type="color">` |
+| `date` | wybór daty | `<input type="date">` |
+| `file` | przesyłanie pliku | `<input type="file">` |
+
+---
+
+## Przyciski
+Przycisk służy do wysyłania lub wykonywania akcji.
+
+```html
+<button type="submit">Wyślij</button>
+<button type="reset">Wyczyść</button>
+<button type="button" onclick="alert('Witaj!')">Kliknij mnie</button>
+```
+
+| Typ | Działanie |
+|------|------------|
+| `submit` | wysyła formularz |
+| `reset` | czyści pola formularza |
+| `button` | zwykły przycisk do którego możemy przypisać jakąś akcję |
+
+---
+
+## Przykład prostego formularza
+
+```html
+<form action="#" method="post">
+  <label>Imię:</label>
+  <input type="text" name="imie"><br><br>
+
+  <label>Email:</label>
+  <input type="email" name="email"><br><br>
+
+  <label>Klasa:</label>
+  <input type="radio" name="klasa" value="i">I
+  <input type="radio" name="klasa" value="ii">II<br><br>
+
+  <label>Zainteresowania:</label><br>
+  <input type="checkbox" name="hobby" value="Podróże">Podróże
+  <input type="checkbox" name="hobby" value="Muzyka">Muzyka
+  <input type="checkbox" name="hobby" value="Sport">Sport<br><br>
+
+  <button type="submit">Wyślij</button>
+  <button type="reset">Wyczyść</button>
+</form>
+```
+
+---
+
+## Multimedia w HTML
+HTML pozwala łatwo osadzać **filmy, dźwięki i treści z YouTube**.
+
+### Film wideo
+
+```html
+<video width="400" controls>
+  <source src="film.mp4" type="video/mp4">
+  Twoja przeglądarka nie obsługuje wideo.
+</video>
+```
+
+Atrybuty:
+- `controls` – pokazuje przyciski odtwarzania/pauzy
+- `autoplay` – automatyczne odtwarzanie
+- `loop` – zapętlenie
+- `muted` – bez dźwięku
+
+---
+
+### Plik dźwiękowy
+
+```html
+<audio controls>
+  <source src="muzyka.mp3" type="audio/mpeg">
+  Twoja przeglądarka nie obsługuje audio.
+</audio>
+```
+
+---
+
+### Film z YouTube (iframe)
+
+```html
+<iframe width="560" height="315"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  title="YouTube video player"
+  frameborder="0"
+</iframe>
+```
+
+---
+
+## Dodatkowe elementy formularza
+
+| Element | Opis | Przykład |
+|----------|------|----------|
+| `<label>` | etykieta dla pola | `<label for="email">Email:</label>` |
+| `<select>` | lista rozwijana | `<select><option>Opcja 1</option></select>` |
+| `<textarea>` | większe pole tekstowe | `<textarea rows="4" cols="30"></textarea>` |
+| `<fieldset>` i `<legend>` | grupowanie pól | `<fieldset><legend>Dane</legend></fieldset>` |
+
+---
+
+## Ćwiczenia
+
+1. Utwórz formularz rejestracyjny z polami:
+   - imię, e-mail, hasło, wybrana piramida (radio), zainteresowania (checkbox)
+2. Dodaj przycisk wysyłania i resetowania.
+3. Wstaw film z YouTube o podróżach.
+
+
+## Zadanie
+Stwórz prostą stronę internetową na temat kuchni wybranego państwa. Materiały możesz pozyskać z Wikipedii lub Chatu GPT.
+Strona powinna zawierać:
+1. Minimum 3 nagłówki z akapitami np. na temat historii, tradycji kulinarnych, dań albo przepisów.
+2. Tabelę z nazwą potrawy, zdjęciem i krótkim opisem.
+3. Skłdaniki do wybranej potrawy jako lista nieuporządkowana.
+4. Przepis - lista kroków do przygotowania wybranej potrawy jako lista numerowana.
+5. Linki do strony restauracji oraz źródła.
+6. W stopce strone umieść swoje imię i nazwisko.
+7. Dodaj film na temat wybranej potrawy.
+8. Utwórz formularz do dodawania komentarza.
+
