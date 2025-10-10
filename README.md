@@ -610,3 +610,19 @@ Strona powinna zawierać:
 7. Dodaj film na temat wybranej potrawy.
 8. Utwórz formularz do dodawania komentarza.
 
+Wykorzystaj poniższy szablon do pliku index.html:
+```html
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <!-- <meta charset="UTF-8"> -->
+
+
+</head>
+<body>
+
+    
+</body>
+</html>
+```
