@@ -15,7 +15,7 @@ Wszystkie elementy można znaleźć do skopiowania z edytora online:
 https://www.tutorialspoint.com/compilers/online-html-editor.htm
 
 Folder z plikami wyślij na link:
-https://sw2szkola-my.sharepoint.com/:f:/g/personal/admin_szkolaszpitalna_rzeszow_pl/EtwGuNWXUfpJqpLZwEb7bLIBlCcc_1VsVWhIxvQwonq-8w?e=5z8nzc
+https://sw2szkola-my.sharepoint.com/:f:/g/personal/admin_szkolaszpitalna_rzeszow_pl/IgDcBrjVl1H6SaqS2cBG-2yyAZQnHP9VbFVoSMb0MKJ6vvM?e=7kAv3z
 
 Wykorzystaj poniższy szablon do pliku index.html:
 ```html
